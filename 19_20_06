@@ -1,0 +1,242 @@
+# import random
+#
+#
+# class Worker:
+#
+#     def __init__(self, name, height, salary):
+#         self.name = name
+#         self.height = height
+#         self.salary = salary
+#
+#     def salary_per_year(self):
+#         return f"Salary per year: {self.salary * 12}"
+#
+#     def salary_per_day(self):
+#         return f"Salary per week: {self.salary / 30}"
+#
+#     def __repr__(self):
+#         return f"name: {self.name}, height: {self.height}, salary: {self.salary}"
+#
+# MikeWorker = Worker("Mike", 190, "6999.99$")
+# # MyTT = Timetable(7, 6)
+# print(MikeWorker)
+#
+# def SECURE_generate_password():
+#     return random.randint(1, 9) #Стандартный тип только для цифр (int)
+# # ---------------------------------------------------------
+# def SECURE_generate_name():
+#     names = ['Alex', 'Mike', "Bob"]
+#     return random.choice(names)
+#
+# def SECURE_generate_height():
+#     heights = [175, 180, 185, 190, 200]
+#     return random.choice(heights)
+#
+# def SECURE_generate_salary():
+#     salaries = ['6199.99$', "6999.99$"]
+#     return random.choice(salaries)
+# # ---------------------------------------------------------
+# def SECURE_generate_password_for_USE():
+#     a = int(input('--> '))
+#     return a
+#
+#
+# print(SECURE_generate_password())
+# MikeWorker.new_func = SECURE_generate_password()
+# print(MikeWorker.new_func)
+# print(Worker)
+# for i in range(1000):
+#     MyWorker = Worker(SECURE_generate_name(), SECURE_generate_height(), SECURE_generate_salary())
+#     print(MyWorker)
+#
+# def Gender():
+#     random_number = random.randint(1, 2)
+#     if random_number == 1:
+#         return f"Your Worker is male"
+#     else:
+#         return f"Your Worker is female"
+
+# Пример использования лямбда-функции в качестве аргумента для функции map():
+
+# Ниже то, как НЕ НАДО делать!)
+# def sr(a):
+#     b = []
+#     for number in a:
+#         b.append(number ** 2)
+#     return b
+#
+# print(sr([1, 2, 3, 4, 5]))
+# Выше то, как НЕ НАДО делать!)
+
+# numbers = [1, 2, 3, 4, 5]
+# for numb in numbers:
+#     print(numb ** 3)
+# squared_numbers = list(map(lambda x: x ** 2, numbers))
+# squared_numbers = list(map(lambda numb: numb*100, numbers))
+# map - равносильно циклу for, но записывается линейно
+# print(squared_numbers)
+
+
+# return_x_2 = lambda x: x * 2
+#
+# print(return_x_2(5))
+
+
+# # Пример использования лямбда-функции в качестве аргумента для функции filter():
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# # def check():
+# #     check_numb = input('enter-> ')
+# #     if check_numb == 'четное':
+# #         a = 0
+# #         return a
+# #     else:
+# #         a = 1
+# #         return a
+#
+# even_numbers = list(filter(lambda x: x % 2 == 1, numbers))
+#
+# print(even_numbers)
+#
+# a = 45
+# if a % 2 == 0:
+#     print('четное')
+# else:
+#     print('не четное')
+
+# # Пример сортировки списка строк по их длине с помощью лямбда-функции:
+# words = ["apple", "banana", "cherry", "date", "elderberry"]
+#       [   5         6         6        4        10      ]
+# sorted_words = sorted(words, key=lambda x: len(x))
+# print(sorted_words)
+
+#
+# # Пример использования лямбда-функции для выполнения простых математических операций:
+# addition = lambda x, y: x + y
+# subtraction = lambda x, y: x - y
+#
+# # def addition():
+# #     pass
+#
+# print(addition(5, 3))
+# print(subtraction(7, 2))
+
+# # Пример использования лямбда-функции для нахождения максимального элемента в списке:
+# numbers = [10, 5, 8, 12, 3]
+# # [10, 5, 8, 12, 3]
+# # 10
+# max_number = max(numbers, key=lambda x: x)
+# print(max_number)
+
+# ----------------------------------------------------------------------------------------
+# 20.06.2023
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self._age = age
+#
+#     def bd_year(self):
+#         bd = 2023 - self._age
+#         return bd
+#
+#     def Qn7t8_m_wIPRQvPyu66CxA(self):
+#         return self._age
+#
+# John_student = Person("John", 25)
+# print(John_student.name)  # Выводит "John"
+# print(John_student.Qn7t8_m_wIPRQvPyu66CxA())   # Выводит 25
+# # print(person.bd_year())
+#
+# # <button>:Qn7t8_m_wIPRQvPyu66CxA:'age'
+
+# ----------------------------------------------------------------------------------------
+
+# class BankAccount:
+#     def __init__(self, account_number, balance):
+#         self._account_number = account_number
+#         self._balance = balance
+#
+#     def get_balance(self):
+#         ac_num = input('ENTER your ac num->')
+#         if ac_num == self._account_number:
+#             return self._balance
+#         else:
+#             return f'!!!wrong ac num!!!'
+#
+#     def deposit(self, amount):
+#         pin = input('ENTER your pin->')
+#         if pin == '1234':
+#             self._balance += amount
+#             return f'new balance is - {self._balance}'
+#         else:
+#             return f'!!!wrong pin!!!'
+#
+#     def withdraw(self, amount):
+#         if self._balance >= amount:
+#             self._balance -= amount
+#         else:
+#             print("Недостаточно")
+#
+# John_account = BankAccount("123", 1000)  # Это создает клиент при регистрации счета в банке
+# print(John_account.balance)
+# print(John_account.get_balance())  # Выводит 1000
+# John_account.deposit(int(input('enter amount-> ')))
+# print(John_account.get_balance())
+# John_account.withdraw(999)        # Выводит "Недостаточно"
+# print(John_account.get_balance())
+# ----------------------------------------------------------------------------------------
+
+# class Car:
+#     def __init__(self, developer, model):
+#         self.__developer = developer
+#         self.__model = model
+#
+#     def get_developer(self):
+#         return self.__developer
+#
+#     def get_model(self):
+#         return self.__model
+#
+# car = Car("Toyota", "Corolla")
+# print(car.get_developer())   # Выводит "Toyota"
+# print(car.get_model())  # Выводит "Corolla"
+
+# ----------------------------------------------------------------------------------------
+
+class Student:
+    def __init__(self, name, grade):
+        self._name = name  # Приватный атрибут с именем студента
+        self._grade = grade  # Приватный атрибут с оценкой студента
+
+    def display_info(self):
+        print("Student:", self._name) #wrong
+        print("Grade:", self._grade) #wrong, only f-string and return
+
+student = Student("John", "A")
+student.display_info()  # Выводит информацию о студенте
+
+# ----------------------------------------------------------------------------------------
+
+class Book:
+    def __init__(self, title, author):
+        self.__title = title  # Приватный атрибут с названием книги
+        self.__author = author  # Приватный атрибут с автором книги
+
+    def get_title(self):
+        return self.__title
+
+    def get_author(self):
+        return self.__author
+
+book = Book("Python Crash Course", "Eric Matthes")
+print(book.get_title())  # Выводит название книги
+print(book.get_author())  # Выводит автора книги
+
+# ----------------------------------------------------------------------------------------
+
+'''Класс "Таймер"
+Разработайте класс "Таймер", который будет имитировать работу секундомера.
+Класс должен иметь методы "start" для начала отсчета времени, "stop"
+для остановки отсчета, и "reset" для сброса времени до нуля.
+Также добавьте метод "get_elapsed_time", который будет возвращать
+прошедшее время с момента запуска в секундах.'''
